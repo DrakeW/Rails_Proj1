@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -194,8 +193,3 @@ To flash the appropriate error, use the line ```flash[:error] = @pokemon.errors.
 
 For easy deployment, reference [Heroku's deployment docs](https://devcenter.heroku.com/articles/getting-started-with-rails4#). You'll need to look at the *Local Workstation Setup* part and the *Deploy your application to Heroku* part.
 =======
-Rails_Proj1
-===========
-
-Ruby on Rails DeCal project 1 --- Pokemon Portal
->>>>>>> 1eccf9f17552499032e097ad2d78429fbf99c1cc
