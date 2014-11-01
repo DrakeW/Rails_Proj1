@@ -1,0 +1,3 @@
+0. because HomeController has not been initiated
+1. All pokemons showed here have trainer_id:nil and the one showed up is just one sample of them. (in home_controller.rb)
+2a. it tells the capture method the id of the trainerless pokemon.  

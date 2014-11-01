@@ -1,0 +1,5 @@
+<h3>Create Your Pokemon!</h3>
+<%= simple_form_for Pokemon.new,:url => pokemons_path do |p|%>
+  <%= p.input :name, placeholder:'Pikacharmander' %>
+  <%= p.button :submit,'Create' %>
+<% end %>
