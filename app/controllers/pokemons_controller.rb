@@ -23,14 +23,19 @@ class PokemonsController < ApplicationController
     redirect_to(:back)
   end
 
+  def heal
+    @pokemon = Pokemon.find(params[:id])
+    if @pokemon.health <= 100
+      @pokemon.health += 10
+    end
+    @pokemon.save
+    redirect_to(:back)
+  end
+
   def damage
     @pokemon = Pokemon.find(params[:id])
     @pokemon.health -= 10
-    if @pokemon.health <= 0
-      destroy(@pokemon)
-    else
-      @pokemon.save
-    end
+    @pokemon.save
     redirect_to(:back) 
   end
 

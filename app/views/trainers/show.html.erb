@@ -5,7 +5,10 @@
 <div>Pokemons:</div>
 <br>
 <div> <% @pokemons.each do |p| %>
-    <div> <%= p.name %> </div>
-    <div> Health: <%= p.health %> </div>
-    <%= button_to "Damage!", damage_path(id: p), :class => "button medium", :method => :patch %>
-  <% end %>
+    <% if p.health > 0 %>
+      <div> <%= p.name %> </div>
+      <div> Health: <%= p.health %> </div>
+      <%= button_to "Damage!", damage_path(id: p), :class => "button medium", :method => :patch %>
+      <%= button_to "Heal", heal_path(id: p), :class => "button medium", :method => :patch %>
+    <% end %>
+    <% end %>
