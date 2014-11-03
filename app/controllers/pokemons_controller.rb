@@ -1,5 +1,9 @@
 class PokemonsController < ApplicationController
 
+  def index
+    @pokemons = Pokemon.all
+  end
+
   def new
   end
 
@@ -32,11 +36,11 @@ class PokemonsController < ApplicationController
     redirect_to(:back)
   end
 
-  def damage
+  def damage 
     @pokemon = Pokemon.find(params[:id])
     @pokemon.health -= 10
     @pokemon.save
-    redirect_to(:back) 
+    redirect_to(trainer_path(current_trainer.id)) 
   end
 
   def destroy(pokemon)
